@@ -22,10 +22,10 @@
  *
  * If you specifically need multiple objects, then use a normal class.
  *
- * @package Aquila
+ * @package Techglazers
  */
 
-namespace AQUILA_THEME\Inc\Traits;
+namespace TECHGLAZERS_THEME\Inc\Traits;
 
 trait Singleton {
 

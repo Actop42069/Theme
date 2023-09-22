@@ -2,10 +2,10 @@
 /**
  * Autoloader file for theme.
  *
- * @package Aquila
+ * @package Techglazers
  */
 
-namespace AQUILA_THEME\Inc\Helpers;
+namespace TECHGLAZERS_THEME\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -16,7 +16,7 @@ namespace AQUILA_THEME\Inc\Helpers;
  */
 function autoloader( $resource = '' ) {
 	$resource_path  = false;
-	$namespace_root = 'AQUILA_THEME\\';
+	$namespace_root = 'TECHGLAZERS_THEME\\';
 	$resource       = trim( $resource, '\\' );
 
 	if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
@@ -68,7 +68,7 @@ function autoloader( $resource = '' ) {
 				break;
 		}
 
-		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( AQUILA_DIR_PATH ), $directory, $file_name );
+		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( TECHGLAZERS_DIR_PATH ), $directory, $file_name );
 
 	}
 
@@ -84,4 +84,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( '\AQUILA_THEME\Inc\Helpers\autoloader' );
+spl_autoload_register( '\TECHGLAZERS_THEME\Inc\Helpers\autoloader' );

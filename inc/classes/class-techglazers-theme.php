@@ -2,14 +2,14 @@
 /**
  * Bootstraps the Theme.
  *
- * @package Aquila
+ * @package Techglazers
  */
 
-namespace AQUILA_THEME\Inc;
+namespace TECHGLAZERS_THEME\Inc;
 
-use AQUILA_THEME\Inc\Traits\Singleton;
+use TECHGLAZERS_THEME\Inc\Traits\Singleton;
 
-class AQUILA_THEME {
+class TECHGLAZERS_THEME {
 	use Singleton;
 
 	protected function __construct() {

@@ -2,7 +2,7 @@
 /**
  * Header template.
  *
- * @package Aquila
+ * @package Techglazers
  */
 ?>
 <!doctype html>

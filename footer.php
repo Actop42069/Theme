@@ -2,7 +2,7 @@
 /**
  * Footer template
  *
- * @package Aquila
+ * @package Techglazers
  */
 ?>
 

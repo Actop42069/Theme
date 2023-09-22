@@ -2,12 +2,12 @@
 /**
  * Register Menus
  *
- * @package Aquila
+ * @package Techglazers
  */
 
-namespace AQUILA_THEME\Inc;
+namespace TECHGLAZERS_THEME\Inc;
 
-use AQUILA_THEME\Inc\Traits\Singleton;
+use TECHGLAZERS_THEME\Inc\Traits\Singleton;
 
 class Menus {
 
@@ -29,8 +29,8 @@ class Menus {
 
 	public function register_menus() {
 		register_nav_menus([
-			'aquila-header-menu' => esc_html__( 'Header Menu', 'aquila' ),
-			'aquila-footer-menu' => esc_html__( 'Footer Menu', 'aquila' ),
+			'techglazers-header-menu' => esc_html__( 'Header Menu', 'techglazers' ),
+			'techglazers-footer-menu' => esc_html__( 'Footer Menu', 'techglazers' ),
 		]);
 	}
 
