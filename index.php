@@ -9,7 +9,7 @@ get_header();
 <div id="primary">
   <main id="main" class="site-main mt-5" role="main">
     <?php
-      if( have_posts() ){
+      if( have_posts() ) :
         ?>
         <div class="container">
           <?php
@@ -36,12 +36,11 @@ get_header();
                   <div class="col-lg-4 col-md-6 col-sm-12">
                   <?php
                 }
-                  ?>       
-                  <h3> <?php the_title();?> </h3>
-                  <div> <?php the_excerpt(); ?></div>
-                  
-                  <?php
+
+                get_template_part( 'template-parts/content');
+
                 $index++;
+
                 if( 0 !==$index  &&  0 === $index % $no_of_columns){
                   ?>
                   </div>
@@ -53,7 +52,12 @@ get_header();
            
         </div>
         <?php
-      }
+
+        else : 
+
+            get_template_part( 'template-parts/content-none' );
+
+      endif;
     
     ?>
   </main>
