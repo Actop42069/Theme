@@ -15,19 +15,10 @@ if ( ! defined( 'TECHGLAZERS_DIR_URI' ) ) {
 }
 
 require_once TECHGLAZERS_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once TECHGLAZERS_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function techglazers_get_theme_instance() {
 	\TECHGLAZERS_THEME\Inc\TECHGLAZERS_THEME::get_instance();
 }
 
 techglazers_get_theme_instance();
-
-function techglazers_enqueue_scripts() {
-
-
-
-
-
-}
-
-add_action( 'wp_enqueue_scripts', 'techglazers_enqueue_scripts' );
