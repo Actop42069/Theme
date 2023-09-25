@@ -18,6 +18,7 @@ class TECHGLAZERS_THEME {
 
 		Assets::get_instance();
 		Menus::get_instance();
+		Meta_Boxes::get_instance(); 
 
 		$this->setup_hooks();
 	}
@@ -89,15 +90,11 @@ class TECHGLAZERS_THEME {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-
-		// Add theme support for selective refresh for widgets.
-		/**
-		 * WordPress 4.5 includes a new Customizer framework called selective refresh
-		 *
-		 * Selective refresh is a hybrid preview mechanism that has the performance benefit of not having to refresh the entire preview window.
-		 *
-		 * @link https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
-		 */
+			/**
+ 			* Registering image sizes
+ 			*/
+		add_image_size( 'featured-thumbnail', 350, 233, true );
+	
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Add default posts and comments RSS feed links to head.
