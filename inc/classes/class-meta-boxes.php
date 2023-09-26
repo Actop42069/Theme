@@ -22,6 +22,8 @@ class Meta_Boxes {
 		 * Actions.
 		 */
         add_action('add_meta_boxes', [$this, 'add_custom_meta_box' ]);
+        add_action('save_post',  [$this, 'save_post_meta_data' ]);
+
     }
 
     public function add_custom_meta_box(){
@@ -41,7 +43,7 @@ class Meta_Boxes {
         $value = get_post_meta( $post->ID, '_hide_page_title',true);
         ?>
         <label for="techglazers-field"><?php esc_html_e( 'Hide the page title' , 'techglazers');?> </label>
-        <select name = "techglazers-field" id="techglazers-field" class= "postbox">
+        <select name = "techglazers_hide_title_field" id="techglazers-field" class= "postbox">
             <option value=""><?php esc_html_e('Select', 'techglazers');?></option>
             <option value="yes"<?php selected($value, 'yes');?>>
              <?php esc_html_e('Yes', 'techglazers');?>
@@ -51,5 +53,16 @@ class Meta_Boxes {
             </option>
     </select>
     <?php
+    }
+
+    public function save_post_meta_data($post_id){
+        if(array_key_exists('techglazers_hide_title_field', $_POST)){
+            update_post_meta(
+                $post_id,
+                '_hide_page_title',
+                $_POST['techglazers_hide_title_field']
+            );
+        }
+
     }
 }
