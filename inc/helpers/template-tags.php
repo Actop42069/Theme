@@ -49,8 +49,16 @@ function techglazers_posted_on(){
     );
 
     $posted_on = sprintf(
-        esc_html_x('Posted on %s', 'post date', 'techglazers'),
+        esc_html_x( 'Posted on %s', 'post date', 'techglazers' ),
         '<a class="text-dark" href="' .esc_url(get_permalink()). '" rel="bookmark">' .$time_string. '</a>'
     );
     echo '<span class="posted-one text-secondary">' .$posted_on. '</span>';
+}
+
+function techglazers_posted_by(){
+    $byline = sprintf(
+        esc_html_x( ' by %s', 'posted author', 'techglazers' ),
+        '<span class="author vcard"><a href="'.esc_url(get_author_posts_url(get_the_author_meta('ID'))).'">'.esc_html(get_the_author()).'</a></span>'
+    );
+    echo '<span class="byline text-secondary">'. $byline .'</span>';
 }
