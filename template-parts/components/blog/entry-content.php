@@ -25,6 +25,7 @@
             );
         } else {
             techglazers_the_excerpt(  );
+            echo techglazers_excerpt_more();
         }
     ?>
 </div>
