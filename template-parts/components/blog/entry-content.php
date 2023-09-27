@@ -24,8 +24,16 @@
                 )
             );
         } else {
-            techglazers_the_excerpt(  );
+            techglazers_the_excerpt( );
+            printf('<br>');
             echo techglazers_excerpt_more();
         }
+
+        wp_link_pages(
+            [
+                'before' => '<div class="page-links">' .esc_html__( 'Pages:','techglazers' ),
+                'after' => '</div>',
+            ]
+            );
     ?>
 </div>
