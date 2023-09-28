@@ -103,6 +103,7 @@ function techglazers_pagination(){
 
     ];
     
+    
     printf( '<nav class="techglazers-pagination clearfix">%s</nav>',
     wp_kses( paginate_links($args), $allowed_tags ) );
 }
