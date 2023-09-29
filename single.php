@@ -36,18 +36,15 @@ get_header();
             get_template_part( 'template-parts/content-none' );
          endif;
         ?>
+              <!--Next and previous link for page navigation -->
+      <div class="prev-link"><?php  previous_post_link(); ?></div>
+      <div class="next-link"><?php  next_post_link(); ?></div>      
         </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
         <?php get_sidebar(); ?>
         </div>
       </div>
-   </div>
-    <div class="container">
-      <?php
-           previous_post_link();
-           next_post_link();
-      ?>
-    </div>
+     </div>
   </main>
 </div>
 
