@@ -22,3 +22,4 @@ function techglazers_get_theme_instance() {
 }
 
 techglazers_get_theme_instance();
+
