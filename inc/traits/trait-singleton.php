@@ -9,11 +9,6 @@ namespace TECHGLAZERS_THEME\Inc\Traits;
 trait Singleton {
 
 	/**
-	 * Protected class constructor to prevent direct object creation
-	 *
-	 * This is meant to be overridden in the classes which implement
-	 * this trait. This is ideal for doing stuff that you only want to
-	 * do once, such as hooking into actions and filters, etc.
 	 */
 	protected function __construct() {
 	}
@@ -25,9 +20,6 @@ trait Singleton {
 	}
 
 	/**
-	 * This method returns new or existing Singleton instance
-	 * of the class for which it is called. This method is set
-	 * as final intentionally, it is not meant to be overridden.
 	 *
 	 * @return object Singleton instance of the class.
 	 */
@@ -41,12 +33,6 @@ trait Singleton {
 		static $instance = [];
 
 		/**
-		 * If this trait is implemented in a class which has multiple
-		 * sub-classes then static::$_instance will be overwritten with the most recent
-		 * sub-class instance. Thanks to late static binding
-		 * we use get_called_class() to grab the called class name, and store
-		 * a key=>value pair for each `classname => instance` in self::$_instance
-		 * for each sub-class.
 		 */
 		$called_class = get_called_class();
 
@@ -57,7 +43,7 @@ trait Singleton {
 			/**
 			 * Dependent items can use the `techglazers_theme_singleton_init_{$called_class}` hook to execute code
 			 */
-			do_action( sprintf( 'techglazers_theme_singleton_init_%s', $called_class ) ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+			do_action( sprintf( 'techglazers_theme_singleton_init_%s', $called_class ) ); 
 
 		}
 
